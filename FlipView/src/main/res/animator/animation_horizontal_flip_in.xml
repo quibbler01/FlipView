@@ -7,7 +7,6 @@
         android:propertyName="alpha"
         android:duration="0" />
 
-
     <objectAnimator
         android:valueFrom="-180"
         android:valueTo="0"
@@ -21,4 +20,5 @@
         android:propertyName="alpha"
         android:startOffset="@integer/anim_length_half"
         android:duration="0" />
+
 </set>

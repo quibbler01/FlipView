@@ -16,7 +16,7 @@ import androidx.core.view.GestureDetectorCompat
 class FlipView : FrameLayout {
 
     companion object {
-        val TAG = FlipView::class.simpleName
+        val TAG = "TAG_${FlipView::class.simpleName}"
 
         const val DEFAULT_FLIP_DURATION = 400
         const val DEFAULT_AUTO_FLIP_BACK_TIME = 1000
@@ -53,7 +53,7 @@ class FlipView : FrameLayout {
     private var flipEnabled = false
     private var flipOnceEnabled = false
     private var autoFlipBack = false
-    private var autoFlipBackTime = 0
+    private var autoFlipBackTime = DEFAULT_AUTO_FLIP_BACK_TIME
 
     private var x1 = 0f
     private var y1 = 0f
@@ -257,7 +257,7 @@ class FlipView : FrameLayout {
                             // Auto Flip Back
                             if (autoFlipBack) {
                                 Handler().postDelayed({
-
+                                    flipTheView()
                                 }, autoFlipBackTime.toLong())
                             }
                         }
