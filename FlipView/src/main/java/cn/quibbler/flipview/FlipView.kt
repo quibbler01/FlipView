@@ -65,7 +65,9 @@ class FlipView : FrameLayout {
 
     private var gestureDetector: GestureDetectorCompat? = null
 
-    private val handler = Handler(Looper.getMainLooper())
+    private val handler by lazy {
+        Handler(Looper.getMainLooper())
+    }
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
