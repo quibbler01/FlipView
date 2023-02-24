@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.content.Context
 import android.os.Handler
+import android.os.Looper
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent
@@ -63,6 +64,8 @@ class FlipView : FrameLayout {
     private var onFlipListener: OnFlipAnimationListener? = null
 
     private var gestureDetector: GestureDetectorCompat? = null
+
+    private val handler = Handler(Looper.getMainLooper())
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -211,7 +214,7 @@ class FlipView : FrameLayout {
 
                             // Auto Flip Back
                             if (autoFlipBack) {
-                                Handler().postDelayed({
+                                handler.postDelayed({
                                     flipTheView()
                                 }, autoFlipBackTime.toLong())
                             }
@@ -256,7 +259,7 @@ class FlipView : FrameLayout {
 
                             // Auto Flip Back
                             if (autoFlipBack) {
-                                Handler().postDelayed({
+                                handler.postDelayed({
                                     flipTheView()
                                 }, autoFlipBackTime.toLong())
                             }
