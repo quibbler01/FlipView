@@ -56,9 +56,6 @@ class FlipView : FrameLayout {
     private var autoFlipBack = false
     private var autoFlipBackTime = DEFAULT_AUTO_FLIP_BACK_TIME
 
-    private var x1 = 0f
-    private var y1 = 0f
-
     private var mFlipState = FlipState.FRONT_SIDE
 
     private var onFlipListener: OnFlipAnimationListener? = null
