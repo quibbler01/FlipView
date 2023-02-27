@@ -4,8 +4,16 @@
     <declare-styleable name="FlipView">
         <attr name="flipOnTouch" format="boolean" />
         <attr name="flipDuration" format="integer" />
-        <attr name="flipType" format="string" />
-        <attr name="flipFrom" format="string" />
+        <attr name="flipType" format="enum">
+            <enum name="vertical" />
+            <enum name="horizontal" />
+        </attr>
+        <attr name="flipFrom" format="enum">
+            <enum name="right" />
+            <enum name="left" />
+            <enum name="front" />
+            <enum name="back" />
+        </attr>
         <attr name="flipEnabled" format="boolean" />
         <attr name="flipOnceEnabled" format="boolean" />
         <attr name="autoFlipBack" format="boolean" />

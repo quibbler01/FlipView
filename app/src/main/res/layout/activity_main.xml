@@ -11,9 +11,10 @@
         android:id="@+id/flip_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        app:autoFlipBack="true"
         app:flipDuration="500"
-        app:flipType="vertical"
-        app:autoFlipBack="true">
+        app:flipFrom="right"
+        app:flipType="vertical">
 
         <include layout="@layout/flip_view_back" />
 
