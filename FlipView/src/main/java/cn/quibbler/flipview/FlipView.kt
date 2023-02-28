@@ -62,10 +62,6 @@ class FlipView : FrameLayout {
 
     private var gestureDetector: GestureDetectorCompat? = null
 
-    private val handler by lazy {
-        Handler(Looper.getMainLooper())
-    }
-
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : this(context, attrs, defStyleAttr, 0)
@@ -213,7 +209,7 @@ class FlipView : FrameLayout {
 
                             // Auto Flip Back
                             if (autoFlipBack) {
-                                handler.postDelayed({
+                                handler?.postDelayed({
                                     flipTheView()
                                 }, autoFlipBackTime.toLong())
                             }
@@ -258,7 +254,7 @@ class FlipView : FrameLayout {
 
                             // Auto Flip Back
                             if (autoFlipBack) {
-                                handler.postDelayed({
+                                handler?.postDelayed({
                                     flipTheView()
                                 }, autoFlipBackTime.toLong())
                             }
