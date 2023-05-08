@@ -124,7 +124,7 @@ class FlipView : FrameLayout {
         findViews()
     }
 
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         try {
             return gestureDetector?.onTouchEvent(ev) == true || super.dispatchTouchEvent(ev)
         } catch (throwable: Throwable) {
@@ -132,7 +132,7 @@ class FlipView : FrameLayout {
         }
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
+    override fun onTouchEvent(event: MotionEvent): Boolean {
         return if (isEnabled && flipOnTouch) {
             gestureDetector?.onTouchEvent(event) == true
         } else {
