@@ -1,8 +1,8 @@
-package cn.quibbler.flipview
+package cn.quibbler.flipviewtest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import cn.quibbler.flipview.databinding.ActivityMainBinding
+import cn.quibbler.flipviewtest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
