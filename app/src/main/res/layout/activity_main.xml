@@ -10,8 +10,9 @@
 
     <cn.quibbler.flipview.FlipView
         android:id="@+id/flip_view"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
         app:autoFlipBack="true"
         app:flipDuration="500"
         app:flipFrom="right"
